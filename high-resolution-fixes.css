@@ -1,0 +1,444 @@
+
+/* High Resolution & Sharp Display Optimizations - 8K Ultra Crisp */
+
+/* ===================================
+   COMPLETE BLUR REMOVAL
+   =================================== */
+
+/* Remove ALL backdrop-filter and filter effects */
+*,
+*::before,
+*::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Specifically target all elements that might have blur */
+.service-card,
+.pricing-card,
+.testimonial-card,
+.card,
+.glass-enhanced,
+.hero::before,
+.mesh-gradient::before,
+.animated-gradient,
+.morphing-blob,
+.blob-1,
+.blob-2,
+.tech-grid,
+.circuit-pattern,
+header,
+.site-header,
+form input,
+form textarea,
+form select,
+.btn-primary,
+.cyber-btn,
+.btn-cta,
+.btn,
+.floating-card,
+.pricing-card-enhanced,
+.interactive-element,
+.btn-ripple {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* ===================================
+   ULTRA HIGH-DPI OPTIMIZATIONS
+   =================================== */
+
+/* Force maximum sharpness on all elements */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Ultra high-DPI media queries for maximum crispness */
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 4), (min-resolution: 384dpi) {
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===================================
+   CARD DESIGNS - ULTRA CRISP
+   =================================== */
+
+/* Clean, sharp card backgrounds */
+.service-card,
+.pricing-card,
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* ===================================
+   BUTTON OPTIMIZATIONS - CRISP
+   =================================== */
+
+/* Ultra-sharp button styling */
+.btn-primary,
+.cyber-btn,
+.btn-cta {
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #8b5cf6 100%) !important;
+  border: none !important;
+  box-shadow: 
+    0 4px 15px rgba(59, 130, 246, 0.3),
+    0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.btn-primary:hover,
+.cyber-btn:hover,
+.btn-cta:hover {
+  background: linear-gradient(135deg, 
+    #2563eb 0%, 
+    #7c3aed 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    0 6px 20px rgba(59, 130, 246, 0.4),
+    0 3px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ===================================
+   TYPOGRAPHY - MAXIMUM SHARPNESS
+   =================================== */
+
+/* Ultra-crisp text rendering */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  letter-spacing: 0.01em;
+  font-optical-sizing: auto;
+}
+
+/* Ultra-high contrast text */
+h1, h2, h3 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  font-weight: 700 !important;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #06b6d4 50%, 
+    #8b5cf6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 700 !important;
+}
+
+/* ===================================
+   FORM ELEMENTS - ULTRA CLEAR
+   =================================== */
+
+/* Crystal clear form elements */
+form input,
+form textarea,
+form select {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+  outline: none !important;
+}
+
+/* ===================================
+   NAVIGATION - CRYSTAL CLEAR
+   =================================== */
+
+/* Ultra-sharp navigation */
+.site-header,
+header {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.main-nav a,
+nav a {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.main-nav a:hover,
+nav a:hover {
+  color: #3b82f6 !important;
+}
+
+/* ===================================
+   ICON SHARPNESS
+   =================================== */
+
+/* Ultra-crisp icons */
+.service-icon,
+.fas, .far, .fab,
+i {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.service-icon {
+  background: linear-gradient(135deg, 
+    #3b82f6 0%, 
+    #8b5cf6 100%) !important;
+  box-shadow: 
+    0 8px 20px rgba(59, 130, 246, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===================================
+   MOBILE OPTIMIZATIONS - 8K READY
+   =================================== */
+
+@media (max-width: 768px) {
+  /* Ensure mobile displays are ultra-crisp */
+  * {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Mobile-specific ultra-sharpness */
+  .service-card,
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Mobile button optimization */
+  .btn-primary,
+  .cyber-btn,
+  .btn-cta {
+    font-size: 1rem !important;
+    padding: 0.875rem 1.5rem !important;
+  }
+}
+
+/* ===================================
+   RETINA/8K SPECIFIC OPTIMIZATIONS
+   =================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  /* 4K+ optimizations */
+  .logo,
+  img,
+  svg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Ultra-sharp borders */
+  .service-card,
+  .pricing-card,
+  .btn {
+    border-width: 0.5px !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  /* 6K+ (like iPhone Pro Max) */
+  .service-card,
+  .pricing-card,
+  .btn {
+    border-width: 0.33px !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 4), (min-resolution: 4dppx) {
+  /* 8K Ultra High-DPI */
+  .service-card,
+  .pricing-card,
+  .btn {
+    border-width: 0.25px !important;
+  }
+  
+  /* 8K-specific optimizations */
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* ===================================
+   COMPLETE FILTER REMOVAL
+   =================================== */
+
+/* Remove any remaining filters, blurs, or effects */
+.hero::before,
+.mesh-gradient::before,
+.animated-gradient,
+.morphing-blob,
+.blob-1,
+.blob-2,
+.tech-grid,
+.circuit-pattern,
+section::before,
+section::after,
+.floating-card,
+.glass-enhanced,
+.pricing-card-enhanced {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Clean section backgrounds */
+section {
+  background: transparent !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, 
+    #0f172a 0%, 
+    #1e293b 50%, 
+    #334155 100%) !important;
+}
+
+#services {
+  background: #1e293b !important;
+}
+
+#pricing {
+  background: #0f172a !important;
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATIONS
+   =================================== */
+
+/* GPU acceleration for smooth, crisp animations */
+.service-card,
+.pricing-card,
+.btn {
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Disable motion blur effects */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===================================
+   WEBKIT/SAFARI SPECIFIC FIXES
+   =================================== */
+
+/* Safari/WebKit ultra-crisp optimizations */
+@supports (-webkit-appearance: none) {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .service-card,
+  .pricing-card,
+  .glass-enhanced,
+  .floating-card {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
+/* Force hardware acceleration for crisp rendering */
+.container,
+.hero-content,
+main,
+section {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* ===================================
+   8K DISPLAY READY
+   =================================== */
+
+/* Ensure all elements are ready for 8K displays */
+@media (min-resolution: 600dpi) {
+  * {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

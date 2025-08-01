@@ -1,0 +1,642 @@
+/* Visual Enhancements - 2025 Modern Updates */
+
+/* ===================================
+   PARTICLES SUPPORT
+   =================================== */
+
+/* Ensure particle canvases are properly positioned */
+[id^="particles-"] {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* Ensure content is above particles */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================
+   ENHANCED VISUAL HIERARCHY
+   =================================== */
+
+/* Gradient backgrounds for key sections */
+.hero {
+  background: linear-gradient(135deg, 
+    var(--slate-900) 0%, 
+    rgba(45, 55, 72, 0.95) 50%, 
+    var(--slate-800) 100%),
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.3;
+}
+
+#services {
+  background: linear-gradient(160deg, 
+    var(--slate-900) 0%, 
+    rgba(30, 41, 59, 0.98) 100%);
+  position: relative;
+}
+
+#pricing {
+  background: linear-gradient(-160deg, 
+    var(--slate-900) 0%, 
+    rgba(15, 23, 42, 0.98) 100%);
+  position: relative;
+}
+
+/* Dynamic section dividers - Enhanced thickness and animation */
+.section-divider {
+  height: 6px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.8) 25%, 
+    rgba(139, 92, 246, 1) 50%, 
+    rgba(6, 182, 212, 0.8) 75%, 
+    transparent 100%);
+  background-size: 300% 100%;
+  margin: 4rem 0;
+  position: relative;
+  border-radius: 3px;
+  animation: gradientFlow 4s ease-in-out infinite;
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.5),
+    0 0 40px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.2);
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(59, 130, 246, 0.4) 25%, 
+    rgba(139, 92, 246, 0.6) 50%, 
+    rgba(6, 182, 212, 0.4) 75%,
+    transparent 100%);
+  background-size: 300% 100%;
+  border-radius: 5px;
+  animation: gradientFlow 4s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 100%);
+  background-size: 200% 100%;
+  border-radius: 3px;
+  animation: shimmerFlow 3s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0% { 
+    background-position: -100% 0;
+    opacity: 0.8;
+  }
+  50% { 
+    background-position: 0% 0;
+    opacity: 1;
+  }
+  100% { 
+    background-position: 100% 0;
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmerFlow {
+  0% { 
+    background-position: -100% 0;
+    opacity: 0.3;
+  }
+  50% { 
+    background-position: 100% 0;
+    opacity: 0.6;
+  }
+  100% { 
+    background-position: 200% 0;
+    opacity: 0.3;
+  }
+}
+
+/* Stronger visual separation */
+section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+section:nth-child(odd) {
+  background: rgba(30, 41, 59, 0.2);
+}
+
+/* ===================================
+   ENHANCED SECTION BACKGROUNDS
+   =================================== */
+
+/* Hero Section - Dynamic Tech Grid */
+.hero {
+  background: 
+    linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.95) 0%, 
+      rgba(30, 41, 59, 0.98) 50%, 
+      rgba(51, 65, 85, 0.95) 100%),
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(255, 255, 255, 0.01) 50%, transparent 100%);
+  background-size: 100px 100px, 100px 100px;
+  animation: subtleShimmer 8s ease-in-out infinite;
+}
+
+@keyframes subtleShimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Services Section - Crystalline Pattern */
+#services {
+  background: 
+    linear-gradient(160deg, 
+      rgba(30, 41, 59, 0.95) 0%, 
+      rgba(51, 65, 85, 0.98) 100%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10L90 30L90 70L50 90L10 70L10 30Z' fill='none' stroke='rgba(59,130,246,0.05)' stroke-width='1'/%3E%3Cpath d='M50 25L75 37.5L75 62.5L50 75L25 62.5L25 37.5Z' fill='none' stroke='rgba(139,92,246,0.03)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+  position: relative;
+}
+
+#services::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 48%, 
+    rgba(59, 130, 246, 0.02) 50%, 
+    transparent 52%);
+  animation: diagonalFlow 12s linear infinite;
+}
+
+@keyframes diagonalFlow {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Pricing Section - Luxury Carbon Fiber */
+#pricing {
+  background: 
+    linear-gradient(-160deg, 
+      rgba(15, 23, 42, 0.98) 0%, 
+      rgba(30, 41, 59, 0.95) 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.005) 2px,
+      rgba(255, 255, 255, 0.005) 4px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      rgba(59, 130, 246, 0.003) 2px,
+      rgba(59, 130, 246, 0.003) 4px
+    );
+  position: relative;
+}
+
+#pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Stats Section - Clean Minimalist */
+.stats {
+  background: 
+    linear-gradient(180deg, 
+      rgba(51, 65, 85, 0.6) 0%, 
+      rgba(30, 41, 59, 0.8) 50%, 
+      rgba(15, 23, 42, 0.6) 100%),
+    linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255, 255, 255, 0.01) 50%, 
+      transparent 100%);
+  position: relative;
+}
+
+/* Contact Section - Tech Circuit Board */
+#contact {
+  background: 
+    linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.95) 0%, 
+      rgba(30, 41, 59, 0.98) 100%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgba(59,130,246,0.03)'%3E%3Crect x='0' y='0' width='1' height='60'/%3E%3Crect x='0' y='0' width='60' height='1'/%3E%3Ccircle cx='30' cy='30' r='2' fill='rgba(139,92,246,0.05)'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  position: relative;
+}
+
+#contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+  animation: circuitPulse 10s ease-in-out infinite;
+}
+
+@keyframes circuitPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Testimonials Section - Elegant Waves */
+#testimonials {
+  background: 
+    linear-gradient(45deg, 
+      rgba(30, 41, 59, 0.95) 0%, 
+      rgba(51, 65, 85, 0.98) 100%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 Q30,40 60,60 T120,60' fill='none' stroke='rgba(139,92,246,0.04)' stroke-width='1'/%3E%3Cpath d='M0,80 Q30,60 60,80 T120,80' fill='none' stroke='rgba(59,130,246,0.03)' stroke-width='1'/%3E%3C/svg%3E") repeat-x;
+  position: relative;
+}
+
+/* FAQ Section - Professional Dot Grid */
+#faq {
+  background: 
+    linear-gradient(160deg, 
+      rgba(51, 65, 85, 0.95) 0%, 
+      rgba(30, 41, 59, 0.98) 100%),
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
+  background-size: auto, 40px 40px;
+  position: relative;
+}
+
+/* Enhanced Card Backgrounds - No Blur */
+.service-card,
+.pricing-card,
+.testimonial-card {
+  background: 
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.06) 0%, 
+      rgba(255, 255, 255, 0.02) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after,
+.pricing-card::after,
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.02) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::after,
+.pricing-card:hover::after,
+.testimonial-card:hover::after {
+  opacity: 1;
+}
+
+/* ===================================
+   IMPROVED CARD DESIGN
+   =================================== */
+
+.service-card,
+.pricing-card,
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated border on hover */
+.service-card::before,
+.pricing-card::before,
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    rgba(59, 130, 246, 0.5), 
+    rgba(139, 92, 246, 0.7), 
+    rgba(6, 182, 212, 0.5));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before,
+.pricing-card:hover::before,
+.testimonial-card:hover::before {
+  opacity: 1;
+  animation: border-flow 2s linear infinite;
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced hover effects with depth */
+.service-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(59, 130, 246, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Featured card styling */
+.pricing-card.featured {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(139, 92, 246, 0.05) 100%);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+  position: relative;
+}
+
+.pricing-card.featured::after {
+  content: 'POPULAR';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* ===================================
+   BETTER COLOR CONTRAST
+   =================================== */
+
+/* Enhanced accent colors */
+:root {
+  --primary-vibrant: #3b82f6;
+  --secondary-vibrant: #8b5cf6;
+  --accent-vibrant: #06b6d4;
+  --success-vibrant: #10b981;
+  --warning-vibrant: #f59e0b;
+  --danger-vibrant: #ef4444;
+}
+
+/* Improved CTA buttons */
+.btn-primary,
+.cyber-btn,
+.btn-cta {
+  background: linear-gradient(135deg, 
+    var(--primary-vibrant) 0%, 
+    var(--secondary-vibrant) 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 15px rgba(59, 130, 246, 0.3),
+    0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary::before,
+.cyber-btn::before,
+.btn-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.cyber-btn:hover::before,
+.btn-cta:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover,
+.cyber-btn:hover,
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(59, 130, 246, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, 
+    var(--secondary-vibrant) 0%, 
+    var(--primary-vibrant) 100%);
+}
+
+/* Enhanced text contrast */
+.text-gradient {
+  background: linear-gradient(135deg, 
+    var(--primary-vibrant) 0%, 
+    var(--accent-vibrant) 50%, 
+    var(--secondary-vibrant) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Improved link visibility */
+a:not(.btn):not(.btn-primary):not(.cyber-btn):not(.btn-cta) {
+  color: var(--accent-vibrant);
+  transition: color 0.3s ease;
+}
+
+a:not(.btn):not(.btn-primary):not(.cyber-btn):not(.btn-cta):hover {
+  color: var(--primary-vibrant);
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced form styling */
+form input,
+form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+/* Enhanced service icons */
+.service-icon {
+  background: linear-gradient(135deg, 
+    var(--primary-vibrant) 0%, 
+    var(--secondary-vibrant) 100%);
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 
+    0 8px 20px rgba(59, 130, 246, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotateY(180deg) scale(1.1);
+  box-shadow: 
+    0 12px 30px rgba(59, 130, 246, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Statistics enhancement */
+.stat-number {
+  color: var(--primary-vibrant);
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Hero stats enhancement */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.3);
+}

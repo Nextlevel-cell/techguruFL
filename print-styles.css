@@ -1,0 +1,249 @@
+/* PRINT STYLES */
+
+@media print {
+  /* Reset and basic setup */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+    background: white;
+  }
+  
+  /* Hide interactive elements */
+  .chatbot-widget,
+  .nav-dots,
+  .floating-actions,
+  .hamburger,
+  #theme-toggle,
+  .particles-js-canvas-el,
+  .hero-controls,
+  .chatbox-popout,
+  button,
+  .btn {
+    display: none !important;
+  }
+  
+  /* Header adjustments */
+  .site-header {
+    position: static !important;
+    background: white !important;
+    border-bottom: 2px solid black;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    max-height: 60px !important;
+  }
+  
+  .main-nav {
+    display: none !important;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+    page-break-after: avoid;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  h1 {
+    font-size: 24pt;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 18pt;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.3em;
+  }
+  
+  h3 {
+    font-size: 14pt;
+  }
+  
+  /* Content sections */
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 2em;
+    padding: 1em 0;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Services section */
+  .service-grid {
+    display: block !important;
+  }
+  
+  .service-card {
+    border: 1px solid black;
+    margin-bottom: 1em;
+    padding: 1em;
+    page-break-inside: avoid;
+  }
+  
+  .service-icon {
+    display: none;
+  }
+  
+  /* Pricing section */
+  .pricing-grid-enhanced {
+    display: block !important;
+  }
+  
+  .pricing-card-enhanced {
+    border: 2px solid black;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    page-break-inside: avoid;
+  }
+  
+  .popular-badge {
+    background: black !important;
+    color: white !important;
+    padding: 0.25em 0.5em;
+    display: inline-block;
+  }
+  
+  /* Stats section */
+  .stats-grid {
+    display: block !important;
+  }
+  
+  .stat-card {
+    border: 1px solid gray;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 24pt;
+    font-weight: bold;
+  }
+  
+  /* Contact section */
+  .contact-form-glass {
+    border: 2px solid black;
+    padding: 1em;
+  }
+  
+  input, textarea {
+    border: 1px solid black !important;
+    background: white !important;
+    color: black !important;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Links */
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: gray;
+  }
+  
+  a[href^="#"]:after {
+    content: "";
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin-left: 1em;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 0.5em;
+    text-align: left;
+  }
+  
+  th {
+    background: lightgray !important;
+    font-weight: bold;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  
+  /* Footer */
+  footer {
+    border-top: 2px solid black;
+    padding-top: 1em;
+    margin-top: 2em;
+  }
+  
+  .footer-content {
+    display: block !important;
+  }
+  
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+  
+  .no-break {
+    page-break-inside: avoid;
+  }
+  
+  /* Print-specific content */
+  .print-only {
+    display: block !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Company info for print */
+  .print-header {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .print-header h1 {
+    margin: 0;
+    font-size: 28pt;
+  }
+  
+  .print-header p {
+    margin: 0.5em 0 0 0;
+    font-size: 12pt;
+    color: gray;
+  }
+}

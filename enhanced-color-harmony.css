@@ -1,0 +1,527 @@
+
+/* ===================================
+   ENHANCED COLOR HARMONY & CONTRAST
+   =================================== */
+
+/* Refined Color Palette with Better Harmony */
+:root {
+  /* Primary Color Scale - Blue Family */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  /* Secondary Color Scale - Purple Family */
+  --color-secondary-50: #faf5ff;
+  --color-secondary-100: #f3e8ff;
+  --color-secondary-200: #e9d5ff;
+  --color-secondary-300: #d8b4fe;
+  --color-secondary-400: #c084fc;
+  --color-secondary-500: #a855f7;
+  --color-secondary-600: #9333ea;
+  --color-secondary-700: #7c3aed;
+  --color-secondary-800: #6b21a8;
+  --color-secondary-900: #581c87;
+
+  /* Accent Color Scale - Cyan Family */
+  --color-accent-50: #ecfeff;
+  --color-accent-100: #cffafe;
+  --color-accent-200: #a5f3fc;
+  --color-accent-300: #67e8f9;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+  --color-accent-600: #0891b2;
+  --color-accent-700: #0e7490;
+  --color-accent-800: #155e75;
+  --color-accent-900: #164e63;
+
+  /* Enhanced Neutral Scale */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+
+  /* Sophisticated Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, 
+    var(--color-primary-600) 0%, 
+    var(--color-primary-500) 25%, 
+    var(--color-accent-500) 75%, 
+    var(--color-accent-400) 100%);
+    
+  --gradient-secondary: linear-gradient(135deg, 
+    var(--color-secondary-600) 0%, 
+    var(--color-secondary-500) 25%, 
+    var(--color-primary-500) 75%, 
+    var(--color-primary-400) 100%);
+    
+  --gradient-accent: linear-gradient(135deg, 
+    var(--color-accent-600) 0%, 
+    var(--color-accent-500) 25%, 
+    var(--color-secondary-500) 75%, 
+    var(--color-secondary-400) 100%);
+
+  /* Refined Background Gradients */
+  --gradient-bg-primary: linear-gradient(135deg, 
+    var(--color-neutral-900) 0%, 
+    rgba(30, 41, 59, 0.98) 25%, 
+    rgba(51, 65, 85, 0.95) 75%, 
+    var(--color-neutral-800) 100%);
+    
+  --gradient-bg-secondary: linear-gradient(160deg, 
+    rgba(15, 23, 42, 0.98) 0%, 
+    rgba(30, 41, 59, 0.95) 50%, 
+    rgba(51, 65, 85, 0.92) 100%);
+
+  /* Enhanced Text Colors with Better Contrast */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-accent: var(--color-accent-400);
+  --text-link: var(--color-primary-400);
+  --text-link-hover: var(--color-primary-300);
+
+  /* Interactive State Colors */
+  --color-hover-overlay: rgba(59, 130, 246, 0.1);
+  --color-active-overlay: rgba(59, 130, 246, 0.2);
+  --color-focus-ring: rgba(59, 130, 246, 0.5);
+}
+
+/* Light Theme Overrides */
+[data-theme="light"] {
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-700);
+  --text-muted: var(--color-neutral-500);
+  --text-accent: var(--color-accent-600);
+  --text-link: var(--color-primary-600);
+  --text-link-hover: var(--color-primary-700);
+  
+  --gradient-bg-primary: linear-gradient(135deg, 
+    var(--color-neutral-50) 0%, 
+    rgba(248, 250, 252, 0.98) 25%, 
+    rgba(241, 245, 249, 0.95) 75%, 
+    var(--color-neutral-100) 100%);
+    
+  --gradient-bg-secondary: linear-gradient(160deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(248, 250, 252, 0.95) 50%, 
+    rgba(241, 245, 249, 0.92) 100%);
+}
+
+/* ===================================
+   ENHANCED SECTION TRANSITIONS
+   =================================== */
+
+/* Sophisticated Section Dividers */
+.section-divider-enhanced {
+  height: 8px;
+  background: var(--gradient-primary);
+  background-size: 400% 100%;
+  margin: 5rem 0;
+  position: relative;
+  border-radius: 4px;
+  animation: gradientFlowEnhanced 6s ease-in-out infinite;
+  box-shadow: 
+    0 0 30px rgba(59, 130, 246, 0.4),
+    0 0 60px rgba(139, 92, 246, 0.2),
+    0 0 90px rgba(6, 182, 212, 0.1);
+}
+
+.section-divider-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: var(--gradient-secondary);
+  background-size: 400% 100%;
+  border-radius: 8px;
+  animation: gradientFlowEnhanced 6s ease-in-out infinite reverse;
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
+.section-divider-enhanced::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 25%, 
+    rgba(255, 255, 255, 0.5) 50%, 
+    rgba(255, 255, 255, 0.3) 75%,
+    transparent 100%);
+  background-size: 300% 100%;
+  border-radius: 2px;
+  animation: shimmerFlowEnhanced 4s ease-in-out infinite;
+}
+
+@keyframes gradientFlowEnhanced {
+  0% { 
+    background-position: 0% 50%;
+    transform: scaleX(0.95);
+  }
+  25% { 
+    background-position: 25% 50%;
+    transform: scaleX(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    transform: scaleX(1.02);
+  }
+  75% { 
+    background-position: 75% 50%;
+    transform: scaleX(1);
+  }
+  100% { 
+    background-position: 0% 50%;
+    transform: scaleX(0.95);
+  }
+}
+
+@keyframes shimmerFlowEnhanced {
+  0% { 
+    background-position: -100% 0;
+    opacity: 0.3;
+  }
+  50% { 
+    background-position: 100% 0;
+    opacity: 0.8;
+  }
+  100% { 
+    background-position: 200% 0;
+    opacity: 0.3;
+  }
+}
+
+/* ===================================
+   ENHANCED SECTION BACKGROUNDS
+   =================================== */
+
+/* Hero Section - Sophisticated Multi-layer Background */
+.hero {
+  background: 
+    var(--gradient-bg-primary),
+    radial-gradient(circle at 25% 75%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 75% 25%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%),
+    linear-gradient(45deg, transparent 0%, rgba(59, 130, 246, 0.01) 50%, transparent 100%);
+  background-size: 200px 200px, 150px 150px;
+  animation: subtlePatternFlow 12s ease-in-out infinite;
+}
+
+/* Services Section - Refined Geometric Pattern */
+#services {
+  background: 
+    var(--gradient-bg-secondary),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 15L105 37.5L105 82.5L60 105L15 82.5L15 37.5Z' fill='none' stroke='rgba(59,130,246,0.06)' stroke-width='1'/%3E%3Cpath d='M60 30L90 45L90 75L60 90L30 75L30 45Z' fill='none' stroke='rgba(139,92,246,0.04)' stroke-width='1'/%3E%3Ccircle cx='60' cy='60' r='3' fill='rgba(6,182,212,0.08)'/%3E%3C/svg%3E") repeat;
+  position: relative;
+}
+
+#services::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(60deg, 
+    transparent 48%, 
+    rgba(59, 130, 246, 0.03) 50%, 
+    transparent 52%);
+  animation: diagonalFlowEnhanced 15s linear infinite;
+}
+
+/* Pricing Section - Premium Carbon Weave */
+#pricing {
+  background: 
+    var(--gradient-bg-primary),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.008) 3px,
+      rgba(255, 255, 255, 0.008) 6px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(59, 130, 246, 0.005) 3px,
+      rgba(59, 130, 246, 0.005) 6px
+    );
+  position: relative;
+}
+
+#pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.04) 0%, transparent 60%);
+  animation: ambientGlow 8s ease-in-out infinite;
+}
+
+/* ===================================
+   ENHANCED CARD STYLING
+   =================================== */
+
+.service-card,
+.pricing-card,
+.testimonial-card {
+  background: 
+    linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.09) 0%, 
+      rgba(255, 255, 255, 0.04) 50%,
+      rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced Hover Effects */
+.service-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 
+    0 24px 48px rgba(59, 130, 246, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: 
+    linear-gradient(135deg, 
+      rgba(59, 130, 246, 0.08) 0%, 
+      rgba(139, 92, 246, 0.04) 50%,
+      rgba(6, 182, 212, 0.02) 100%);
+}
+
+/* Animated Border Gradient */
+.service-card::before,
+.pricing-card::before,
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: var(--gradient-primary);
+  background-size: 300% 300%;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderGradientFlow 3s ease-in-out infinite;
+}
+
+.service-card:hover::before,
+.pricing-card:hover::before,
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderGradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===================================
+   ENHANCED BUTTON STYLING
+   =================================== */
+
+.btn-primary,
+.cyber-btn,
+.btn-cta {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 24px rgba(59, 130, 246, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover,
+.cyber-btn:hover,
+.btn-cta:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 16px 32px rgba(59, 130, 246, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.2);
+  background: var(--gradient-secondary);
+}
+
+/* Enhanced Text Colors */
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Improved Link Styling */
+a:not(.btn):not(.btn-primary):not(.cyber-btn):not(.btn-cta) {
+  color: var(--text-link);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: rgba(59, 130, 246, 0.3);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+a:not(.btn):not(.btn-primary):not(.cyber-btn):not(.btn-cta):hover {
+  color: var(--text-link-hover);
+  text-decoration-color: rgba(59, 130, 246, 0.8);
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+/* ===================================
+   ANIMATION ENHANCEMENTS
+   =================================== */
+
+@keyframes subtlePatternFlow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: translateX(0) translateY(0);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: translateX(20px) translateY(-10px);
+  }
+}
+
+@keyframes diagonalFlowEnhanced {
+  0% { transform: translateX(-120px) translateY(-120px); }
+  100% { transform: translateX(120px) translateY(120px); }
+}
+
+@keyframes ambientGlow {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY IMPROVEMENTS
+   =================================== */
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #0891b2 100%);
+  }
+  
+  .service-card,
+  .pricing-card,
+  .testimonial-card {
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .section-divider-enhanced,
+  .section-divider-enhanced::before,
+  .section-divider-enhanced::after,
+  .hero::before,
+  #services::after,
+  #pricing::before {
+    animation: none;
+  }
+  
+  .service-card:hover,
+  .pricing-card:hover,
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   =================================== */
+
+@media (max-width: 768px) {
+  .section-divider-enhanced {
+    height: 6px;
+    margin: 3rem 0;
+  }
+  
+  .service-card,
+  .pricing-card,
+  .testimonial-card {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .btn-primary,
+  .cyber-btn,
+  .btn-cta {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-divider-enhanced {
+    height: 4px;
+    margin: 2rem 0;
+  }
+}
